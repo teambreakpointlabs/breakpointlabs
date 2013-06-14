@@ -16,3 +16,10 @@
 //= require_tree .
 
 $(document).foundation();
+
+Modernizr.load([
+    {
+        test: Modernizr.cssgradients,
+        nope: function () { alert('Sorry, your browser is too old to view this website. Please upgrade or use another browser.'); }
+    }
+]);
