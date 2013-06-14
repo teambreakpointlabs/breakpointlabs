@@ -65,7 +65,7 @@
 // Grid Variables
 //
 
-// $row-width: 62.5em;
+   $row-width: 100%;
 // $column-gutter: 1.875em;
 // $total-columns: 12;
 
@@ -968,21 +968,21 @@
 //
 
 // Background color for the top bar
-// $topbar-bg: #111;
+   $topbar-bg: rgba(255,250,250,0.80);
 
 // Height and margin
-// $topbar-height: 45px;
+   $topbar-height: 80px;
 // $topbar-margin-bottom: emCalc(30px);
 
 // Control Input height for top bar
 // $topbar-input-height: 2.45em;
 
 // Controlling the styles for the title in the top bar
-// $topbar-title-weight: bold;
+   $topbar-title-weight: normal;
 // $topbar-title-font-size: emCalc(17px);
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #fff;
+// $topbar-link-color: black;
 // $topbar-link-weight: bold;
 // $topbar-link-font-size: emCalc(13px);
 
@@ -998,8 +998,8 @@
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: emCalc(13px);
 // $topbar-menu-link-weight: bold;
-// $topbar-menu-link-color: #fff;
-// $topbar-menu-icon-color: #fff;
+   $topbar-menu-link-color: rgba(0,98,255,0.56);
+   $topbar-menu-icon-color: rgba(0,98,255,0.56);
 // $topbar-menu-link-color-toggled: #888;
 // $topbar-menu-icon-color-toggled: #888;
 

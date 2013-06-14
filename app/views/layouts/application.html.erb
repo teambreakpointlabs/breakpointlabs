@@ -13,18 +13,59 @@
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-
+  	<title><%= content_for?(:title) ? yield(:title) : "Breakpoint Labs" %></title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   	<%= stylesheet_link_tag    "application" %>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <div class="container">
+    <header>
+      <nav class="top-bar">
+        <ul class="title-area">
+          <!-- Title Area -->
+          <li class="name">
+            <h1>
+              <%=link_to 'breakpoint', root_path %>
+            </h1>
+          </li>
+          <li class="toggle-topbar menu-icon">
+            <a href="#">
+              <span></span>
+            </a>
+          </li>
+        </ul>
 
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li>
+            <a href="/contact"><h4 class="subheader">contact</h4></a>
+          </li>
+          <li>
+            <a href="/about"><h4 class="subheader">about</h4></a>
+          </li> 
+        </ul>
+      </section>
+      </nav>
+    </header>
     <%= yield %>
-
-    
+    <footer>
+      <br>
+      <br>
+      <div class="row"> 
+        <div class="large-6 columns">
+          <h4 class="subheader"> &copy breakpoint labs ltd. 2013</h4>
+        </div>
+        <div class="large-6 columns content-right">  
+          <i class="icon-twitter-sign icon-4x hover"></i><i class="icon-facebook-sign icon-4x hover"></i><i class="icon-linkedin-sign icon-4x hover"></i> 
+        </div>
+      </div>
+    </footer>
+    </div>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

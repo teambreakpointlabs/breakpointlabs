@@ -1,3 +1,116 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* variables */
+
+  /* main vars */
+	$primary_font_color: rgba(0,98,255,0.56);
+	$holder_color: rgba(252,250,250,0.80);
+	$font: 'Open Sans', sans-serif;
+
+	/* social icon vars */
+	$social_icon_hover_radius: 100px;
+	$social_icon_color: #afafaf;
+	$social_icon_margin_right: 12px;
+
+
+/* mixins */
+
+@mixin social-icon-footer-hover{
+	background-color: $primary_font_color;
+  border-radius: $social_icon_hover_radius;
+  cursor: pointer;
+}
+
+@mixin social-icon-contact{
+	background-color: white;
+	border-radius: $social_icon_hover_radius;
+  cursor: pointer;
+}
+
+/* top bar */
+/* title */
+.top-bar .name h1 a{
+	color: $primary_font_color;
+	font-family: $font;
+	font-size: 28px;
+	font-weight:normal;
+}
+/* nav */
+.top-bar-section ul li > a{
+	color: $primary_font_color;
+	font-family: $font;
+	font-size: 16px;
+	font-weight:normal;
+	background-color: white;
+}
+.top-bar-section li a:not(.button):hover{
+	background-color: rgba(0,98,255,0.10);
+	border-radius: 10px;
+}
+.top-bar-section li a:not(.button){
+	background: rgba(252,250,250,0.20);
+	border-radius: 10px;
+}
+.title_color{
+	color: $primary_font_color;
+}
+
+ul.right{
+	background: none;
+	li a{
+	  margin-top:22px;
+	  background: $holder_color;
+	}
+}
+
+/* social icons */
+
+.icon-facebook-sign
+{
+	color: $social_icon_color; 
+	margin-right: $social_icon_margin_right;
+	&:hover{
+		@include social-icon-footer-hover;
+	}
+}
+.icon-twitter-sign
+{
+	color: $social_icon_color; 
+	margin-right: $social_icon_margin_right;
+  &:hover {
+	 @include social-icon-footer-hover;
+  }
+}
+.icon-linkedin-sign
+{
+	color: $social_icon_color; 
+	margin-right: $social_icon_margin_right;
+	&:hover{
+	  @include social-icon-footer-hover;
+  }
+}
+.icon-facebook:hover
+{
+  @include social-icon-contact;
+}
+.icon-twitter:hover
+{
+  @include social-icon-contact;
+}
+
+/* main */
+
+.holder{
+	background: $holder_color;
+	padding: 10px;
+}
+
+body{
+	    background: url(/assets/breakpoint_labs_background.png) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+}
+
+.content-right{
+	text-align: right;
+}
