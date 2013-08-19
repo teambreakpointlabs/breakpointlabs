@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
 
   before_filter :check_browser
 
@@ -7,8 +6,9 @@ class ApplicationController < ActionController::Base
 
     def check_browser
       user_agent = UserAgent.parse(request.user_agent)
-      if user_agent.browser == 'Internet Explorer' && user_agent.version < '9.0'
-         render text: 'Your browser is not supported! Please upgrade your browser to view our website!'
+      browser = user_agent.to_str
+      if ((browser.include? "MSIE 6") || (browser.include? "MSIE 7"))
+        render text: 'Your browser is not supported! Please Upgrade to view our website!'
       end
     end
 end
